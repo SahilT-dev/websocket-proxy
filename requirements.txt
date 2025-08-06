@@ -3,3 +3,4 @@ flask-sock
 websocket-client
 gunicorn
 gevent-websocket
+Flask-Cors
