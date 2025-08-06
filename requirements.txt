@@ -4,3 +4,4 @@ websocket-client
 gunicorn
 gevent-websocket
 Flask-Cors
+requests
