@@ -2,9 +2,14 @@ import os
 from flask import Flask
 from flask_sock import Sock
 import websocket # This is the 'websocket-client' library
+from flask_cors import CORS  # 1. Import the CORS library
 
 # Initialize Flask and Flask-Sock
 app = Flask(__name__)
+# 2. Configure CORS for your app
+# This tells the server to allow requests ONLY from your Render UI's domain.
+CORS(app, resources={r"/*": {"origins": "https://test-server-2-oce9.onrender.com"}})
+
 sock = Sock(app)
 
 # The IP address and port of your VM server
